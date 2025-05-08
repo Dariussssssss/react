@@ -1,20 +1,38 @@
-export const Accordion = () => {
-    return (
-        <div>
-           <AccordionTitle/>
-            <AccordionBody/>
-        </div>
+type Accordion = {
+    title: string,
+    collapsed: boolean,
+}
 
+type AccordionTitle = {
+    title: string,
+}
+
+export const Accordion = ({title, collapsed}: Accordion) => {
+    if (collapsed) {
+        return (
+            <div>
+                <AccordionTitle title={title}/>
+            </div>
+
+        )
+    } else {
+        return (
+            <div>
+                <AccordionTitle title={title}/>
+                <AccordionBody/>
+            </div>
+
+        )
+    }
+}
+
+const AccordionTitle = ({title}: AccordionTitle) => {
+    return (
+        <h3>{title}</h3>
     )
 }
 
-const AccordionTitle =  () => {
-    return (
-        <h3>Menu</h3>
-    )
-}
-
-const AccordionBody =  () => {
+const AccordionBody = () => {
     return (
         <ul>
             <li>1</li>
