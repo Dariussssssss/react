@@ -1,5 +1,3 @@
-import {Star} from "./ratingComponets/Star.tsx";
-
 export const Rating = () => {
     return (
         <div>
@@ -9,5 +7,11 @@ export const Rating = () => {
             <Star/>
             <Star/>
         </div>
+    )
+}
+
+const Star = () =>{
+    return (
+        <div>star</div>
     )
 }

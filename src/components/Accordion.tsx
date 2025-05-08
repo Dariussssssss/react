@@ -1,6 +1,3 @@
-import {AccordionTitle} from "./accordionComponents/AccordionTitle.tsx";
-import {AccordionBody} from "./accordionComponents/AccordionBody.tsx";
-
 export const Accordion = () => {
     return (
         <div>
@@ -10,3 +7,22 @@ export const Accordion = () => {
 
     )
 }
+
+const AccordionTitle =  () => {
+    return (
+        <h3>Menu</h3>
+    )
+}
+
+const AccordionBody =  () => {
+    return (
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    )
+}
+
